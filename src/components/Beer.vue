@@ -14,11 +14,6 @@ export default {
           this.$emit('click_child',this.beer.id);  //przekazuje event do rodzica
       }
   }
-//   data () {
-//     return {
-//       msg: 'Beer description'
-//     }
-//   }
 }
 </script>
 
