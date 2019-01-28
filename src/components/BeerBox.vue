@@ -1,5 +1,5 @@
 <template>
-  <div class="beer-box-container" v-if="displayBox">
+  <div class="beer-box-container" v-if="display">
     <div class="beer-box-container__header">
       <h1>{{ beer_description.name }}</h1>
       <CloseButton v-on:close_clicked="closeModal"/>
@@ -12,7 +12,6 @@
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 
@@ -25,19 +24,9 @@ export default {
   components: {
     CloseButton
   },
-  computed: {
-    displayBox: {
-      get () {
-        return this.display
-      },
-      set (val) {
-        this.display = val
-      }
-    }
-  },
   methods: {
     closeModal() {
-      this.displayBox = false;
+      this.$emit('close_modal',this);
     }
   },
   data () {
@@ -51,17 +40,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .beer-box-container {
-    width: 500px;
-    height: 600px;
-    border: 1px solid black;
-    border-radius: 20px;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    padding: 5px 20px;
+  width: 500px;
+  height: 600px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 5px 20px;
 }
 
 .beer-box-container__header {
