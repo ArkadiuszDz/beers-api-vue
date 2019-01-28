@@ -1,27 +1,24 @@
 <template>
   <div class="container">
-    <BeersList :beers="beers"/>
+    <div class="beer-header">
+      <div class="img-wrapper">
+        <img :src="this.beers.image_url" />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import BeersList from '@/components/BeersList';
 import get_beers from '../assets/scripts/getBeers';
 
 export default {
-  name: 'MainContent',
-  components: {
-    BeersList
-  },
+  name: 'BeerDetails',
   methods: {
     get_beers
   },
-  destroyed () {
-    document.body.style.overflow = ''
-  },
   created() {
-    get_beers().then(response => {
-      this.beers = [...response];
+    get_beers(this.$route.params.beerName).then(response => {
+      this.beers = response[0]
     });
   },
   data () {

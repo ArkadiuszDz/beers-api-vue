@@ -9,7 +9,15 @@
         </div>
         <div class="beer-info">
           <p>{{ beer_description.description }}</p>
+          <p>IBU: {{ beer_description.ibu }}</p>
         </div>
+      </div>
+      <div class="btn-wrapper">
+        <router-link :to="{ name: 'BeerDetails', params: { beerName: beer_description.name }}">
+          <div class="btn">
+            kliknij
+          </div>
+        </router-link>
       </div>
     </div>
   </div>

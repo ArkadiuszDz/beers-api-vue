@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import MainContent from '@/components/MainContent';
-import my_component from '@/components/my_component'
+import BeerDetails from '@/components/BeerDetails'
 
 Vue.use(Router)
 
@@ -13,9 +13,9 @@ export default new Router({
       component: MainContent
     },
     {
-      path: '/my_component',
-      name: 'my_component',
-      component: my_component
+      path: '/:beerName',
+      name: 'BeerDetails',
+      component: BeerDetails
     }
   ]
 })
