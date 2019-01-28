@@ -2,7 +2,6 @@
   <div id="app">
     <Header/>
     <router-view/>
-    
   </div>
 </template>
 
@@ -29,6 +28,7 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 * {
   box-sizing: border-box;

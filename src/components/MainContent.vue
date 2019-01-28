@@ -37,6 +37,5 @@ export default {
   width: 80vw;
   margin: 0 auto;
   padding: 20px 0;
-  position: relative;
 }
 </style>

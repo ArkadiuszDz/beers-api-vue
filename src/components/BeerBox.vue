@@ -45,12 +45,14 @@ export default {
   border: 1px solid black;
   border-radius: 20px;
   margin: 0 auto;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  
+  z-index: 5;
+  
+  /* transform: translate(-50%, -50%); */
   background-color: white;
+  /* transform: translateY(-50%); */
   padding: 5px 20px;
+  position: relative;
 }
 
 .beer-box-container__header {
@@ -82,5 +84,4 @@ img {
   text-align: justify;
   padding: 5px 10px;
 }
-
 </style>
