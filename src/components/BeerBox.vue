@@ -15,7 +15,7 @@
       <div class="btn-wrapper">
         <router-link :to="{ name: 'BeerDetails', params: { beerName: beer_description.name }}">
           <div class="btn">
-            kliknij
+            See more details
           </div>
         </router-link>
       </div>
@@ -53,12 +53,8 @@ export default {
   border: 1px solid black;
   border-radius: 20px;
   margin: 0 auto;
-  
   z-index: 5;
-  
-  /* transform: translate(-50%, -50%); */
   background-color: white;
-  /* transform: translateY(-50%); */
   padding: 5px 20px;
   position: relative;
 }
@@ -91,5 +87,27 @@ img {
 .beer-info p {
   text-align: justify;
   padding: 5px 10px;
+}
+
+.btn-wrapper {
+  width: 200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #c469ff;
+  color: white;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: #b348f9;
+}
+
+.btn-wrapper a {
+  text-decoration: none;
 }
 </style>

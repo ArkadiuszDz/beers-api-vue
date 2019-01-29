@@ -33,4 +33,10 @@ body {
 * {
   box-sizing: border-box;
 }
+.container {
+  max-width: 1200px;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 20px 0;
+}
 </style>
