@@ -32,7 +32,7 @@
             <h3>Malts</h3>
             <div class="beer-malts__item" v-for="malt in this.beers.ingredients.malt" :key="malt">
               <div class="malt">
-                <p>{{ malt.name }}</p>
+                <p><strong>{{ malt.name }}</strong></p>
                 <p>Amount: {{ malt.amount.value }} {{ malt.amount.unit }}</p>
               </div>
             </div>
@@ -41,7 +41,7 @@
             <h3>Hops</h3>
             <div class="beer-hops__item" v-for="hop in this.beers.ingredients.hops" :key="hop">
               <div class="hop">
-                <p>{{ hop.name }}</p>
+                <p><strong>{{ hop.name }}</strong></p>
                 <p>Amount: {{ hop.amount.value }} {{ hop.amount.unit }}</p>
                 <p>Add: {{ hop.add }}</p>
                 <p>Attribute: {{ hop.attribute }}</p>

@@ -15,7 +15,7 @@
       <div class="btn-wrapper">
         <router-link :to="{ name: 'BeerDetails', params: { beerName: beer_description.name }}">
           <div class="btn">
-            See more details
+            <span>See more details</span>
           </div>
         </router-link>
       </div>
@@ -101,10 +101,33 @@ img {
   background-color: #c469ff;
   color: white;
   border-radius: 10px;
+  position: relative;
 }
 
-.btn:hover {
-  background-color: #b348f9;
+.btn::after {
+    content: '';
+    position: absolute;
+    line-height: 48px;
+    left: 50%;
+	  bottom: 0;
+	  transform: translateX(-50%);
+    transform-origin: 50% 50%;
+    height: 100%;
+    width: 0;
+    background-color: #b348f9;
+    transition: 0.4s;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.btn:hover::after {
+  transform: translateX(-50%);
+  width: 100%;
 }
 
 .btn-wrapper a {

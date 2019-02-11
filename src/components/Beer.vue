@@ -23,14 +23,30 @@ export default {
 .beers-list__item {
     border: 1px solid black;
     margin: 0 auto;
+    position: relative;
 }
 
 .beers-list__item p {
     font-weight: bold;
+    position: relative;
+    z-index: 2;
 }
 
-.beers-list__item:hover {
-        background-color: rgba(240,240,240,0.9);
+.beers-list__item::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+	bottom: 0;
+	transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240,240,240,0.9);
+    transition: transform 0.4s;
+}
+
+.beers-list__item:hover::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 </style>
