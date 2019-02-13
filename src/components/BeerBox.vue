@@ -99,25 +99,33 @@ img {
   width: 100%;
   padding: 15px;
   background-color: #c469ff;
+  border: 1px solid #c469ff;
   color: white;
   border-radius: 10px;
   position: relative;
 }
 
 .btn::after {
-    content: '';
+    content: 'See more details';
     position: absolute;
-    line-height: 48px;
     left: 50%;
 	  bottom: 0;
 	  transform: translateX(-50%);
     transform-origin: 50% 50%;
     height: 100%;
     width: 0;
-    background-color: #b348f9;
+    color: #c469ff;
+    background-color: white;
     transition: 0.4s;
     border-radius: 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 3;
 }
 
 .btn span {

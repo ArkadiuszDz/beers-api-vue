@@ -1,11 +1,13 @@
 <template>
     <header>
         <div class="header-content">
-            <div class="logo-wrapper">
-                <img src="../assets/logo.png">
-            </div>
             <div class="nav-content">
                 <nav class="menu">
+                    <div class="logo-wrapper">
+                        <router-link :to="{ path: '/'}">
+                            <img src="../assets/logo.png">
+                        </router-link>
+                    </div>
                     <div class="menu__item">
                         <p>Item 1</p>
                     </div>
@@ -36,7 +38,6 @@ export default {
 <style scoped>
 header {
     padding: 20px 0;
-    background-color: rgba(255,255,0,0.8);
 }
 .logo-wrapper {
     width: 80px;
@@ -46,22 +47,22 @@ header {
 }
 .header-content {
     display: flex;
-    justify-content: space-between;
-    max-width: 80vw;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
     margin: 0 auto;
 }
 .nav-content {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 50%;
 }
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .menu__item {
-    width: 30%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
 }
 .menu__item p {
     width: 100%;
